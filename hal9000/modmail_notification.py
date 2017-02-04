@@ -62,9 +62,10 @@ def many_reports(msg):
 
     link = get_modmail_link(msg)
 
-    logger('High Reports: %s', link)
+    logger.info('High Reports: %s', link)
 
-    sb.send("<{}|Submission with 4+ reports>".format(link))
+    sb.send("<{}|Submission with 4+ reports>".format(link),
+            channel='modupdates')
 
 
 def get_age(created_utc):

@@ -1,6 +1,9 @@
 ### Secret ###
 slackbot_settings.py
 
+### Database ###
+*.db
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
