@@ -1,0 +1,20 @@
+API_TOKEN = "Custom Bot token"
+DEFAULT_REPLY = "Sorry Dave, I do not understand that request."
+ERRORS_TO = 'bot_testing'
+
+PLUGINS = [
+    # 'slackbot.plugins',
+    'hal9000.plugins'
+]
+
+VERSION = 'v0.0.1'
+
+REDDIT = {
+    'USER': 'user',
+    'PASSWORD': 'secret',
+    'CLIENT_ID': 'your all id',
+    'CLIENT_SECRET': 'your app secret',
+    'USER_AGENT': 'meaningful user agent')
+}
+
+WEBHOOK = 'your webhook url'
