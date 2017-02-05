@@ -1,5 +1,2 @@
-dataset==0.8.0
 praw==4.3.0
-requests==2.13.0
-schedule==0.4.2
 slackbot==0.4.1

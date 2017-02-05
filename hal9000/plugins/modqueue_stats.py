@@ -1,24 +1,31 @@
 """ Worldnews modqueue stats plugin """
-#pylint: disable=C0111
+# pylint: disable=C0111
+import logging
 import math
 import re
 from slackbot.bot import listen_to
 from hal9000.plugins import reddit
 
+logger = logging.getLogger(__name__)
+
 @listen_to(r'^\.modqueue_stats\s*$', re.I)
 @listen_to(r'^\.qstats\s*$', re.I)
-def modqueue_status(message):
+def modqueue_stats(message):
     message.react('hourglass')
+
+    logger.debug('Modqueue stats body: %s', message.body)
+    logger.info('Moqueue stats request from: %s', 'test')
 
     worldnews = reddit.subreddit('worldnews')
     comments = 0
     submissions = 0
 
-    for _ in worldnews.mod.modqueue(only='comments'):
-        comments += 1
-
-    for _ in worldnews.mod.modqueue(only='submissions'):
-        submissions += 1
+    for thing in worldnews.mod.modqueue(limit=2000):
+        print(thing.name)
+        if thing.name.startswith('t1'):
+            comments += 1
+        if thing.name.startswith('t3'):
+            submissions += 1
 
     total = comments + submissions
     pages = math.ceil(total / 25)
@@ -32,18 +39,3 @@ def modqueue_status(message):
     else:
         message.react('partyparrot')
         message.reply(':partyparrot: Queue is empty! :partyparrot:')
-
-
-# @listen_to(r'^\.qempty$', re.I)
-# def test_q_emtpy(message):
-#     message.react('hourglass')
-#     message.react('partyparrot')
-#     message.reply(':partyparrot: Queue is empty! :partyparrot:')
-
-
-# @listen_to(r'^\.me\s*$', re.I)
-# def get_me(message):
-#     message.react('hourglass')
-#     message.reply(reddit.user.me().name)
-
-

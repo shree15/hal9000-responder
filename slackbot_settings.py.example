@@ -3,7 +3,6 @@ DEFAULT_REPLY = "Sorry Dave, I do not understand that request."
 ERRORS_TO = 'bot_testing'
 
 PLUGINS = [
-    # 'slackbot.plugins',
     'hal9000.plugins'
 ]
 
@@ -17,4 +16,3 @@ REDDIT = {
     'USER_AGENT': 'meaningful user agent')
 }
 
-WEBHOOK = 'your webhook url'
