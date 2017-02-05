@@ -1,18 +1,17 @@
+"""Hal9000-responder slackbot_settings.py"""
+
 API_TOKEN = "Custom Bot token"
-DEFAULT_REPLY = "Sorry Dave, I do not understand that request."
+DEFAULT_REPLY = "I'm sorry, Dave, I'm afraid I can't do that."
 ERRORS_TO = 'bot_testing'
 
 PLUGINS = [
     'hal9000.plugins'
 ]
 
-VERSION = 'v0.0.1'
-
 REDDIT = {
     'USER': 'user',
     'PASSWORD': 'secret',
     'CLIENT_ID': 'your all id',
-    'CLIENT_SECRET': 'your app secret',
-    'USER_AGENT': 'meaningful user agent'
+    'CLIENT_SECRET': 'your app secret'
 }
 
