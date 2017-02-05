@@ -1,7 +1,9 @@
-Worldnews SlackBot
-==================
+Hal9000 - Responder
+===================
+.. image:: https://travis-ci.org/r-worldnews/hal9000-responder.svg?branch=master
+   :target: https://travis-ci.org/r-worldnews/hal9000-responder
 
-This bot has two parts, an message responder and a periodic scheduler. The responder is based on slackbot using a custom bot integration, while the periodic routine is based on schedule and uses as webhook.  This is largely because slackbot does not have any mechanisms for periodic routines like scanning modmail.
+This is the responder portion of the Hal9000 slackbot for /r/worldnews slack. It uses slackbot's RTM slack client. 
 
 .. _Installation:
 
