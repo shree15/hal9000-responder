@@ -21,7 +21,6 @@ def modqueue_stats(message):
     submissions = 0
 
     for thing in worldnews.mod.modqueue(limit=2000):
-        print(thing.name)
         if thing.name.startswith('t1'):
             comments += 1
         if thing.name.startswith('t3'):
