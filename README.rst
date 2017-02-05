@@ -12,7 +12,7 @@ Download from git:
 
 .. code-block:: bash
 
-    git clone https://
+    git clone https://github.com/r-worldnews/hal9000-responder.git
 
 Create config file from example:
 
@@ -35,6 +35,8 @@ Start the bot:
 .. code-block:: bash
 
     python run.py
+    
+.. _License:
 
 License
 -------
