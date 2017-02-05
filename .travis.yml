@@ -2,12 +2,11 @@ language: python
 python:
     - 3.5
     - 3.6
-env:
-    - PYTHONPATH=.
 install:
     - yes | pip uninstall py pytest
     - yes | pip install -U pip setuptools
     - pip install -e .
+    - cp slackbot_settings.py.example slackbot_settings.py
     - pip install coveralls
 script:
     python setup.py test

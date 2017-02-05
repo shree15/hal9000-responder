@@ -13,6 +13,6 @@ REDDIT = {
     'PASSWORD': 'secret',
     'CLIENT_ID': 'your all id',
     'CLIENT_SECRET': 'your app secret',
-    'USER_AGENT': 'meaningful user agent')
+    'USER_AGENT': 'meaningful user agent'
 }
 
